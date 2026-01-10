@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>AIT Enterprises | AV, Smart Classroom & Security Solutions</title>
+
+  <!-- SEO -->
+  <meta name="description" content="AIT Enterprises delivers professional AV solutions, smart classrooms, interactive flat panels, CCTV, automation, and security systems across India." />
+  <meta name="keywords" content="Audio Visual Solutions, Smart Classroom, Interactive Flat Panel, CCTV, Automation, AV Integrator India" />
+  <meta name="author" content="AIT Enterprises" />
+
+  <style>
+    :root{
+      --primary:#0a2540;
+      --accent:#2563eb;
+      --muted:#6b7280;
+      --bg:#f9fafb;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+
+    body{
+      font-family:Inter, system-ui, sans-serif;
+      color:#111827;
+      background:#ffffff;
+      line-height:1.65;
+      scroll-behavior:smooth;
+    }
+
+    img{max-width:100%;display:block}
+
+    /* HEADER */
+    header{
+      background:
+        linear-gradient(rgba(10,37,64,.65),rgba(10,37,64,.65)),
+        url('images/header/technology-bg.jpg') center/cover no-repeat;
+      padding:80px 20px;
+      color:#fff;
+    }
+
+    .hero{
+      max-width:1200px;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:60px;
+      flex-wrap:wrap;
+    }
+
+    .hero-logo img{height:110px}
+
+    .hero-text h1{
+      font-size:42px;
+      margin-bottom:15px;
+    }
+
+    .hero-text p{
+      font-size:18px;
+      max-width:520px;
+      color:#e5e7eb;
+    }
+
+    /* NAV */
+    nav{
+      background:#020617;
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+
+    nav ul{
+      list-style:none;
+      display:flex;
+      justify-content:center;
+      padding:14px 0;
+      gap:32px;
+    }
+
+    nav a{
+      color:#e5e7eb;
+      text-decoration:none;
+      font-weight:500;
+    }
+
+    nav a:hover{color:#60a5fa}
+
+    /* SECTIONS */
+    section{
+      padding:90px 20px;
+      opacity:0;
+      transform:translateY(40px);
+      transition:.8s ease;
+    }
+
+    section.in-view{
+      opacity:1;
+      transform:none;
+    }
+
+    section.alt{background:var(--bg)}
+
+    .container{max-width:1200px;margin:auto}
+
+    h2{
+      font-size:34px;
+      color:var(--primary);
+      margin-bottom:16px;
+    }
+
+    p.lead{
+      color:var(--muted);
+      max-width:800px;
+      margin-bottom:50px;
+    }
+
+    /* SERVICES */
+    .service-list{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:28px;
+    }
+
+    .service-item{
+      background:#fff;
+      border-left:5px solid var(--accent);
+      padding:26px;
+      border-radius:12px;
+      box-shadow:0 10px 25px rgba(0,0,0,.08);
+    }
+
+    /* PARTNERS */
+    .partners-wrapper{overflow:hidden}
+
+    .partner-strip{
+      display:flex;
+      gap:50px;
+      width:max-content;
+      animation:scroll 30s linear infinite;
+    }
+
+    @keyframes scroll{
+      0%{transform:translateX(0)}
+      100%{transform:translateX(-50%)}
+    }
+
+    .partner-strip img{
+      max-height:48px;
+      opacity:.85;
+    }
+
+    /* CONTACT */
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:50px;
+      background:#0a2540;
+      color:#fff;
+      padding:50px;
+      border-radius:20px;
+    }
+
+    footer{
+      background:#020617;
+      color:#9ca3af;
+      text-align:center;
+      padding:40px 20px;
+    }
+
+    .float-btn{
+      position:fixed;
+      right:24px;
+      padding:15px 22px;
+      border-radius:50px;
+      font-weight:600;
+      text-decoration:none;
+      color:#fff;
+      box-shadow:0 14px 32px rgba(0,0,0,.35);
+      z-index:999;
+    }
+
+    .call{bottom:24px;background:#2563eb}
+    .whatsapp{bottom:86px;background:#25d366}
+
+    @media(max-width:900px){
+      .hero{flex-direction:column;align-items:flex-start}
+      .contact-grid{grid-template-columns:1fr}
+      .hero-text h1{font-size:34px}
+    }
+
+    @media(max-width:600px){
+      .hero-text h1{font-size:28px}
+      .hero-text p{font-size:16px}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="hero">
+    <div class="hero-logo">
+      <img src="images/logo/ait-logo.png" alt="AIT Enterprises Logo" loading="lazy">
+    </div>
+    <div class="hero-text">
+      <h1>Integrated AV & Smart Technology Solutions</h1>
+      <p>Professional audio visual, security, automation and digital systems for modern environments.</p>
+    </div>
+  </div>
+</header>
+
+<nav aria-label="Primary Navigation">
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#partners">Partners</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="about">
+  <div class="container" style="text-align:center;">
+    <h2>About AIT Enterprises</h2>
+    <p class="lead" style="margin:auto;">
+      AIT Enterprises is a professionally managed system integration company delivering AV, Smart Classroom, Security and Automation solutions.
+    </p>
+
+    <video controls style="width:100%;max-width:1000px;border-radius:18px;margin-top:40px;" loading="lazy">
+      <source src="images/about/intro-video.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+
+<section id="services" class="alt">
+  <div class="container">
+    <h2>Our Services</h2>
+    <p class="lead">Comprehensive and future-ready technology solutions.</p>
+
+    <div class="service-list">
+      <div class="service-item"><h3>Hospitality AV</h3><p>Music, signage and IPTV systems.</p></div>
+      <div class="service-item"><h3>Boardrooms</h3><p>Smart conferencing solutions.</p></div>
+      <div class="service-item"><h3>Smart Boards</h3><p>Interactive education displays.</p></div>
+      <div class="service-item"><h3>CCTV & Access</h3><p>Advanced surveillance systems.</p></div>
+      <div class="service-item"><h3>Automation</h3><p>Lighting and AV control.</p></div>
+      <div class="service-item"><h3>Solar</h3><p>Energy solutions.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="products" class="alt" style="background:linear-gradient(180deg,#f9fafb,#ffffff);">
+  <div class="container">
+
+    <h2>Products & Solutions</h2>
+    <p class="lead" style="max-width:850px;">
+      AIT Enterprises offers advanced Interactive Flat Panel Displays (IFPDs) designed for smart classrooms,
+      training centers, boardrooms, and collaborative environments.
+    </p>
+
+    <div style="background:#ffffff;border-radius:20px;padding:50px 40px;
+                box-shadow:0 18px 40px rgba(0,0,0,0.08);margin-top:40px;">
+
+      <!-- Product Heading -->
+      <h3 style="text-align:center;margin-top:0;">
+        Interactive Flat Panel Displays (IFPD)
+      </h3>
+
+      <p style="max-width:900px;margin:0 auto 40px;text-align:center;">
+        Our Interactive Flat Panel Displays deliver an engaging, touch-enabled experience
+        with powerful hardware, intelligent software, and seamless collaboration tools.
+        Ideal for modern education and professional spaces.
+      </p>
+
+      <!-- Product Images -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+                  gap:30px;margin-bottom:60px;align-items:center;">
+        <img src="images/products/ifpd-65.jpg" alt="65 Inch Interactive Flat Panel Display"
+             loading="lazy" style="border-radius:14px;box-shadow:0 10px 25px rgba(0,0,0,.12);">
+        <img src="images/products/ifpd-75.jpg" alt="75 Inch Interactive Flat Panel Display"
+             loading="lazy" style="border-radius:14px;box-shadow:0 10px 25px rgba(0,0,0,.12);">
+        <img src="images/products/ifpd-86.jpg" alt="86 Inch Interactive Flat Panel Display"
+             loading="lazy" style="border-radius:14px;box-shadow:0 10px 25px rgba(0,0,0,.12);">
+      </div>
+
+      <!-- Size Comparison Table -->
+      <div style="overflow-x:auto;margin-bottom:50px;">
+        <table style="width:100%;border-collapse:collapse;">
+          <thead>
+            <tr style="background:#0a2540;color:#ffffff;">
+              <th style="padding:14px;border:1px solid #e5e7eb;">Display Size</th>
+              <th style="padding:14px;border:1px solid #e5e7eb;">Recommended Usage</th>
+              <th style="padding:14px;border:1px solid #e5e7eb;">Ideal Capacity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:12px;border:1px solid #e5e7eb;">55 Inch</td>
+              <td style="padding:12px;border:1px solid #e5e7eb;">Home tuitions / Small rooms</td>
+              <td style="padding:12px;border:1px solid #e5e7eb;">10–15 students</td>
+            </tr>
+            <tr style="background:#f9fafb;">
+              <td style="padding:12px;border:1px solid #e5e7eb;">65 Inch</td>
+              <td style="padding:12px;border:1px solid #e5e7eb;">Standard classrooms</td>
+              <td style="padding:12px;border:1px solid #e5e7eb;">Up to 20 students</td>
+            </tr>
+            <tr>
+              <td style="padding:12px;border:1px solid #e5e7eb;">75 Inch</td>
+              <td style="padding:12px;border:1px solid #e5e7eb;">Medium classrooms</td>
+              <td style="padding:12px;border:1px solid #e5e7eb;">30–40 students</td>
+            </tr>
+            <tr style="background:#f9fafb;">
+              <td style="padding:12px;border:1px solid #e5e7eb;">86 Inch</td>
+              <td style="padding:12px;border:1px solid #e5e7eb;">Large classrooms / halls</td>
+              <td style="padding:12px;border:1px solid #e5e7eb;">70–80 students</td>
+            </tr>
+            <tr>
+              <td style="padding:12px;border:1px solid #e5e7eb;">98 Inch</td>
+              <td style="padding:12px;border:1px solid #e5e7eb;">Lecture halls</td>
+              <td style="padding:12px;border:1px solid #e5e7eb;">Up to 90 students</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Technical Highlights -->
+      <div style="max-width:1000px;margin:0 auto;">
+        <h4>Key Technical Highlights</h4>
+        <ul style="line-height:1.9;">
+          <li><strong>Processor:</strong> Octa-core processor for smooth performance</li>
+          <li><strong>Memory & Storage:</strong> 8 GB RAM with 128 GB internal storage (recommended)</li>
+          <li><strong>Operating System:</strong> Android 13 or higher</li>
+          <li><strong>Touch Technology:</strong> High-precision multi-touch support</li>
+          <li><strong>OPS Slot:</strong> Windows OPS support for advanced applications</li>
+          <li><strong>Mounting:</strong> Wall mount or mobile trolley stand</li>
+          <li><strong>Educational Content:</strong> Built-in or add-on interactive teaching software</li>
+        </ul>
+      </div>
+
+      <!-- CTA -->
+      <div style="text-align:center;margin-top:40px;">
+        <a href="#contact"
+           style="display:inline-block;background:#2563eb;color:#ffffff;
+                  padding:14px 34px;border-radius:30px;
+                  font-weight:600;text-decoration:none;">
+          Request Demo / Price Quote
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="lecture-cameras" class="alt">
+  <div class="container">
+
+    <h2>Lecture Recording Cameras</h2>
+    <p class="lead" style="max-width:850px;">
+      AIT Enterprises provides intelligent lecture recording camera solutions designed for classrooms,
+      training halls, auditoriums, and hybrid learning environments.
+      Capture, stream, and record lectures automatically with professional video quality.
+    </p>
+
+    <div style="background:#ffffff;border-radius:20px;padding:50px 40px;
+                box-shadow:0 18px 40px rgba(0,0,0,0.08);margin-top:40px;">
+
+      <!-- Image Row -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+                  gap:30px;margin-bottom:50px;align-items:center;">
+        <img src="images/products/lecture-camera-ptz.jpg"
+             alt="PTZ Lecture Recording Camera"
+             loading="lazy"
+             style="border-radius:14px;box-shadow:0 10px 25px rgba(0,0,0,.12);">
+
+        <img src="images/products/lecture-camera-tracking.jpg"
+             alt="Auto Tracking Lecture Camera"
+             loading="lazy"
+             style="border-radius:14px;box-shadow:0 10px 25px rgba(0,0,0,.12);">
+
+        <img src="images/products/lecture-camera-classroom.jpg"
+             alt="Lecture Recording Camera in Smart Classroom"
+             loading="lazy"
+             style="border-radius:14px;box-shadow:0 10px 25px rgba(0,0,0,.12);">
+      </div>
+
+      <!-- Use Cases -->
+      <div style="max-width:1000px;margin:0 auto 40px;">
+        <h4>Ideal Use Cases</h4>
+        <ul style="line-height:1.9;">
+          <li>Smart Classrooms & Digital Learning</li>
+          <li>Lecture Halls & Auditoriums</li>
+          <li>Teacher Training & Faculty Development</li>
+          <li>Online, Hybrid & Distance Learning</li>
+          <li>Corporate Training & Boardroom Sessions</li>
+        </ul>
+      </div>
+
+      <!-- Features -->
+      <div style="max-width:1000px;margin:0 auto 40px;">
+        <h4>Key Features</h4>
+        <ul style="line-height:1.9;">
+          <li><strong>Auto Speaker Tracking:</strong> AI-based instructor tracking without camera operator</li>
+          <li><strong>PTZ Control:</strong> Smooth pan-tilt-zoom with preset positions</li>
+          <li><strong>Full HD / 4K Output:</strong> Crystal-clear video quality</li>
+          <li><strong>Multiple Output Interfaces:</strong> HDMI, USB, IP streaming support</li>
+          <li><strong>One-Touch Recording:</strong> Easy start/stop recording</li>
+          <li><strong>Live Streaming:</strong> YouTube, LMS, Zoom & Teams compatible</li>
+          <li><strong>Ceiling / Wall Mount:</strong> Flexible installation options</li>
+        </ul>
+      </div>
+
+      <!-- System Integration -->
+      <div style="max-width:1000px;margin:0 auto 40px;">
+        <h4>Integrated Smart Classroom Solution</h4>
+        <p>
+          Our lecture recording cameras integrate seamlessly with Interactive Flat Panels,
+          wireless microphones, audio systems, and Learning Management Systems (LMS).
+          This enables institutions to create high-quality recorded content with minimal effort.
+        </p>
+      </div>
+
+      <!-- CTA -->
+      <div style="text-align:center;margin-top:40px;">
+        <a href="#contact"
+           style="display:inline-block;background:#2563eb;color:#ffffff;
+                  padding:14px 34px;border-radius:30px;
+                  font-weight:600;text-decoration:none;">
+          Request Demo / Solution Consultation
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="partners">
+  <div class="container">
+    <h2>Trusted Technology Partners</h2>
+    <p class="lead">We collaborate with leading global, education and AI brands to deliver reliable and future-ready solutions.</p>
+
+    <div class="partners-wrapper">
+      <div class="partner-strip">
+        <img src="images/partners/bosch.png" alt="Bosch" />
+        <img src="images/partners/jbl.png" alt="JBL" />
+        <img src="images/partners/optoma.png" alt="Optoma" />
+        <img src="images/partners/acer.png" alt="Acer" />
+        <img src="images/partners/a-and-t.png" alt="A&T" />
+        <img src="images/partners/newline.png" alt="Newline" />
+        <img src="images/partners/aver.png" alt="Aver" />
+        <img src="images/partners/dahua.png" alt="Dahua" />
+        <img src="images/partners/hikvision.png" alt="Hikvision" />
+        <img src="images/partners/viewsonic.png" alt="ViewSonic" />
+        <img src="images/partners/study-n-learn.png" alt="Study N Learn" />
+        <img src="images/partners/prizor.png" alt="Prizor" />
+        <img src="images/partners/iris-ai.png" alt="Iris AI" />
+
+        <!-- Duplicate for seamless loop -->
+        <img src="images/partners/bosch.png" alt="Bosch" />
+        <img src="images/partners/jbl.png" alt="JBL" />
+        <img src="images/partners/optoma.png" alt="Optoma" />
+        <img src="images/partners/acer.png" alt="Acer" />
+        <img src="images/partners/a-and-t.png" alt="A&T" />
+        <img src="images/partners/newline.png" alt="Newline" />
+        <img src="images/partners/aver.png" alt="Aver" />
+        <img src="images/partners/dahua.png" alt="Dahua" />
+        <img src="images/partners/hikvision.png" alt="Hikvision" />
+        <img src="images/partners/viewsonic.png" alt="ViewSonic" />
+        <img src="images/partners/study-n-learn.png" alt="Study N Learn" />
+        <img src="images/partners/prizor.png" alt="Prizor" />
+        <img src="images/partners/iris-ai.png" alt="Iris AI" />
+      </div>
+    </div>
+</section>
+
+<section id="contact" class="alt">
+  <div class="container">
+    <h2 style="text-align:center;">Contact Us</h2>
+    <p class="lead" style="text-align:center;margin-left:auto;margin-right:auto;">
+      Have a question or planning a project? Get in touch with us and our team will respond promptly.
+    </p>
+
+    <div class="contact-grid" style="margin-top:50px;">
+      <!-- Contact Details -->
+      <div>
+        <h3>AIT Enterprises</h3>
+        <p>
+          <strong>MUMBAI</strong><br>
+          202, Shubham Palace, Sector 15, Koparkhairne<br>
+          Navi Mumbai – 400709
+        </p>
+        <p>
+          <strong>COIMBATORE</strong><br>
+          Udayampalayam Road<br>
+          Coimbatore, Tamil Nadu – 641028
+        </p>
+        <p><strong>Email:</strong><br>aitenterprises2024@gmail.com</p>
+        <p><strong>Phone:</strong><br>+91 9326520874</p>
+      </div>
+
+      <!-- Contact Form -->
+      <form action="https://formspree.io/f/mnqekqrd" method="POST" style="background:#ffffff;color:#111827;padding:30px;border-radius:16px;box-shadow:0 15px 35px rgba(0,0,0,.15);">
+        <label>Name</label><br>
+        <input type="text" name="name" required style="width:100%;padding:12px;margin:8px 0 18px;border-radius:8px;border:1px solid #d1d5db;" />
+
+        <label>Email</label><br>
+        <input type="email" name="email" required style="width:100%;padding:12px;margin:8px 0 18px;border-radius:8px;border:1px solid #d1d5db;" />
+
+        <label>Phone</label><br>
+        <input type="tel" name="phone" style="width:100%;padding:12px;margin:8px 0 18px;border-radius:8px;border:1px solid #d1d5db;" />
+
+        <label>Message</label><br>
+        <textarea name="message" rows="4" required style="width:100%;padding:12px;margin:8px 0 20px;border-radius:8px;border:1px solid #d1d5db;"></textarea>
+
+        <button type="submit" style="background:#2563eb;color:#fff;border:none;padding:14px 26px;border-radius:30px;font-weight:600;cursor:pointer;">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 AIT Enterprises. All rights reserved.</p>
+</footer>
+
+<a href="tel:9326520874" class="float-btn call" aria-label="Call AIT Enterprises">📞 Call</a>
+<a href="https://wa.me/919326520874" class="float-btn whatsapp" aria-label="WhatsApp AIT Enterprises">💬 WhatsApp</a>
+
+<script>
+  const sections = document.querySelectorAll("section");
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add("in-view");
+        obs.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.15});
+  sections.forEach(sec => observer.observe(sec));
+</script>
+
+</body>
+</html>
