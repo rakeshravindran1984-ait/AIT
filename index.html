@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
   <title>AIT Enterprises | AV, Smart Classroom & Security Solutions</title>
 
@@ -17,27 +18,56 @@
       --accent:#2563eb;
       --muted:#6b7280;
       --bg:#f9fafb;
+      --nav-height:64px;
+      --bottom-nav-height:62px;
     }
 
     *{box-sizing:border-box;margin:0;padding:0}
+    img{max-width:100%;display:block}
 
     body{
       font-family:Inter, system-ui, sans-serif;
       color:#111827;
       background:#ffffff;
-      line-height:1.65;
+      line-height:1.6;
       scroll-behavior:smooth;
+      overflow-x:hidden;
     }
 
-    img{max-width:100%;display:block}
+    nav{
+      background:#020617;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      height:var(--nav-height);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
 
-    /* HEADER */
+    nav ul{
+      list-style:none;
+      display:flex;
+      gap:38px;
+    }
+
+    nav a{
+      color:#e5e7eb;
+      text-decoration:none;
+      font-weight:500;
+      font-size:16px;
+    }
+
+    nav a:hover{color:#60a5fa}
+
     header{
       background:
         linear-gradient(rgba(10,37,64,.65),rgba(10,37,64,.65)),
         url('images/header/technology-bg.jpg') center/cover no-repeat;
       padding:80px 20px;
+      padding-top:120px;
       color:#fff;
+      text-align:left;
     }
 
     .hero{
@@ -51,218 +81,120 @@
     }
 
     .hero-logo img{height:110px}
+    .hero-text h1{font-size:42px;margin-bottom:15px;font-weight:700;}
+    .hero-text p{font-size:18px;max-width:520px;color:#e5e7eb;}
 
-    .hero-text h1{
-      font-size:42px;
-      margin-bottom:15px;
+    @media(max-width:900px){
+      .hero{
+        flex-direction:column;
+        text-align:center;
+        gap:30px;
+      }
+      .hero-text h1{font-size:32px;}
+      .hero-text p{font-size:17px;margin:auto;}
+      header{text-align:center;padding-top:100px;}
     }
 
-    .hero-text p{
-      font-size:18px;
-      max-width:520px;
-      color:#e5e7eb;
+    @media(max-width:600px){
+      .hero-text h1{font-size:28px;}
+      .hero-text p{font-size:16px;}
+      .hero-logo img{height:80px;}
     }
 
-    /* NAV */
-    nav{
-      background:#020617;
-      position:sticky;
-      top:0;
-      z-index:100;
-    }
-
-    nav ul{
-      list-style:none;
-      display:flex;
-      justify-content:center;
-      padding:14px 0;
-      gap:32px;
-    }
-
-    nav a{
-      color:#e5e7eb;
-      text-decoration:none;
-      font-weight:500;
-    }
-
-    nav a:hover{color:#60a5fa}
-
-    /* SECTIONS */
     section{
-      padding:90px 20px;
+      padding:80px 20px;
       opacity:0;
       transform:translateY(40px);
       transition:.8s ease;
     }
-
-    section.in-view{
-      opacity:1;
-      transform:none;
-    }
-
-    section.alt{background:var(--bg)}
+    section.in-view{opacity:1;transform:none;}
 
     .container{max-width:1200px;margin:auto}
-
-    h2{
-      font-size:34px;
-      color:var(--primary);
-      margin-bottom:16px;
-    }
-
+    h2{font-size:32px;color:var(--primary);margin-bottom:14px;font-weight:700;}
     p.lead{
       color:var(--muted);
+      margin-bottom:42px;
+      line-height:1.7;
+      font-size:17px;
       max-width:800px;
-      margin-bottom:50px;
     }
 
-    /* SERVICES */
-    .service-list{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:28px;
-    }
-
-    .service-item{
-      background:#fff;
-      border-left:5px solid var(--accent);
-      padding:26px;
-      border-radius:12px;
-      box-shadow:0 10px 25px rgba(0,0,0,.08);
-    }
-
-    /* COLLAPSIBLE CLUSTER */
-    #products { padding-bottom:20px; }
-    #products details { margin-top:8px; }
     #products summary{
-      cursor:pointer;
-      font-size:1.3rem;
+      font-size:1.25rem;
       font-weight:600;
       padding:14px 0;
+      cursor:pointer;
     }
 
-    /* PARTNERS */
-    .partners-wrapper{overflow:hidden}
-
-    .partner-strip{
-      display:flex;
-      gap:50px;
-      width:max-content;
-      animation:scroll 30s linear infinite;
+    @media(max-width:760px){
+      .service-list{grid-template-columns:1fr;}
     }
 
-    @keyframes scroll{
-      0%{transform:translateX(0)}
-      100%{transform:translateX(-50%)}
-    }
-
-    .partner-strip img{
-      max-height:48px;
-      opacity:.85;
-    }
-
-    /* CONTACT */
-    .contact-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:50px;
-      background:#0a2540;
-      color:#fff;
-      padding:50px;
-      border-radius:20px;
-    }
-
-    footer{
-      background:#020617;
-      color:#9ca3af;
-      text-align:center;
-      padding:40px 20px;
-    }
-
-    .float-btn{
-      position:fixed;
-      right:24px;
-      padding:15px 22px;
-      border-radius:50px;
-      font-weight:600;
-      text-decoration:none;
-      color:#fff;
-      box-shadow:0 14px 32px rgba(0,0,0,.35);
-      z-index:999;
-    }
-
-    .call{bottom:24px;background:#2563eb}
-    .whatsapp{bottom:86px;background:#25d366}
-
-    @media(max-width:900px){
-      .hero{flex-direction:column;align-items:flex-start}
-      .contact-grid{grid-template-columns:1fr}
-      .hero-text h1{font-size:34px}
-    }
-
-    @media(max-width:600px){
-      .hero-text h1{font-size:28px}
-      .hero-text p{font-size:16px}
+    @media(max-width:480px){
+      section{padding:54px 16px;}
     }
   </style>
 </head>
 
-<body>
+<body id="top">
 
-<header>
-  <div class="hero">
-    <div class="hero-logo">
-      <img src="images/logo/ait-logo.png" alt="AIT Enterprises Logo" loading="lazy">
-    </div>
-    <div class="hero-text">
-      <h1>Integrated AV & Smart Technology Solutions</h1>
-      <p>Professional audio visual, security, automation and digital systems for modern environments.</p>
-    </div>
-  </div>
-</header>
-
-<nav aria-label="Primary Navigation">
+<nav>
   <ul>
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
+    <li><a href="#products">Products</a></li>
     <li><a href="#partners">Partners</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
+<header>
+  <div class="hero">
+    <div class="hero-text">
+      <h1>AIT Enterprises</h1>
+      <p>AV, Smart Classroom, CCTV, Automation & Solar solutions for institutions and enterprises.</p>
+    </div>
+    <div class="hero-logo">
+      <img src="images/logo/ait-logo.png" alt="AIT Enterprises Logo">
+    </div>
+  </div>
+</header>
+
 <section id="about">
   <div class="container" style="text-align:center;">
     <h2>About AIT Enterprises</h2>
     <p class="lead" style="margin:auto;">
-      AIT Enterprises is a professionally managed system integration company delivering AV, Smart Classroom, Security and Automation solutions.
+      AIT Enterprises is a professionally managed system integration company delivering AV, Smart Classroom,
+      Security and Automation solutions.
     </p>
-
     <video controls style="width:100%;max-width:1000px;border-radius:18px;margin-top:40px;" loading="lazy">
       <source src="images/about/intro-video.mp4" type="video/mp4">
     </video>
   </div>
 </section>
 
-<section id="services" class="alt">
+<section id="services" class="alt" style="background:var(--bg);">
   <div class="container">
     <h2>Our Services</h2>
     <p class="lead">Comprehensive and future-ready technology solutions.</p>
 
-    <div class="service-list">
-      <div class="service-item"><h3>Hospitality AV</h3><p>Music, signage and IPTV systems.</p></div>
-      <div class="service-item"><h3>Boardrooms</h3><p>Smart conferencing solutions.</p></div>
-      <div class="service-item"><h3>Smart Boards</h3><p>Interactive education displays.</p></div>
-      <div class="service-item"><h3>CCTV & Access</h3><p>Advanced surveillance systems.</p></div>
-      <div class="service-item"><h3>Automation</h3><p>Lighting and AV control.</p></div>
-      <div class="service-item"><h3>Solar</h3><p>Energy solutions.</p></div>
+    <div class="service-list" style="
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:24px;">
+      <div class="service-item" style="background:#fff;padding:24px;border-left:5px solid var(--accent);border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,.08);"><h3>Hospitality AV</h3><p>Music, signage and IPTV systems.</p></div>
+      <div class="service-item" style="background:#fff;padding:24px;border-left:5px solid var(--accent);border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,.08);"><h3>Boardrooms</h3><p>Smart conferencing solutions.</p></div>
+      <div class="service-item" style="background:#fff;padding:24px;border-left:5px solid var(--accent);border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,.08);"><h3>Smart Boards</h3><p>Interactive education displays.</p></div>
+      <div class="service-item" style="background:#fff;padding:24px;border-left:5px solid var(--accent);border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,.08);"><h3>CCTV & Access</h3><p>Advanced surveillance systems.</p></div>
+      <div class="service-item" style="background:#fff;padding:24px;border-left:5px solid var(--accent);border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,.08);"><h3>Automation</h3><p>Lighting and AV control.</p></div>
+      <div class="service-item" style="background:#fff;padding:24px;border-left:5px solid var(--accent);border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,.08);"><h3>Solar</h3><p>Energy solutions.</p></div>
     </div>
   </div>
 </section>
 
-<!-- UNIFIED PRODUCT CLUSTER -->
-<section id="products" class="alt" style="background:linear-gradient(180deg,#f9fafb,#ffffff);">
+<!-- PRODUCTS & SOLUTIONS -->
+<section id="products" class="alt" style="background:linear-gradient(180deg,#f9fafb,#ffffff);padding-bottom:50px;">
   <div class="container">
-
     <h2>Products & Solutions</h2>
     <p class="lead" style="max-width:850px;">
       AIT Enterprises offers advanced Interactive Flat Panel Displays (IFPDs) and intelligent lecture recording
@@ -273,82 +205,94 @@
     <details open>
       <summary>Interactive Flat Panel Displays (IFPD)</summary>
 
-      <div style="background:#ffffff;border-radius:20px;padding:50px 40px;
-                  box-shadow:0 18px 40px rgba(0,0,0,0.08);margin-top:20px;">
+      <div style="background:#ffffff;border-radius:20px;padding:40px 32px;
+                  box-shadow:0 18px 40px rgba(0,0,0,0.08);margin-top:18px;">
 
-        <p style="max-width:900px;margin:0 auto 40px;text-align:center;">
-          Our Interactive Flat Panel Displays deliver an engaging, touch-enabled experience
+        <p style="max-width:900px;margin:0 auto 32px;text-align:center;">
+          Interactive Flat Panel Displays deliver an engaging, touch-enabled experience
           with powerful hardware, intelligent software, and seamless collaboration tools.
         </p>
 
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-                    gap:30px;margin-bottom:60px;align-items:center;">
-          <img src="images/products/ifpd-65.jpg" alt="65 Inch Interactive Flat Panel Display"
-               loading="lazy" style="border-radius:14px;box-shadow:0 10px 25px rgba(0,0,0,.12);">
-    
+                    gap:24px;margin-bottom:36px;">
+          <img src="images/products/ifpd-65.jpg"
+               alt="65 Inch Interactive Flat Panel Display"
+               loading="lazy"
+               style="border-radius:14px;box-shadow:0 10px 25px rgba(0,0,0,.12);">
         </div>
 
-        <div style="overflow-x:auto;margin-bottom:50px;">
-          <table style="width:100%;border-collapse:collapse;">
+        <!-- TABLE (DESKTOP) -->
+        <div class="ifpd-spec-wrapper" style="margin-bottom:40px;">
+          <table class="ifpd-spec-table" style="width:100%;border-collapse:collapse;">
             <thead>
               <tr style="background:#0a2540;color:#ffffff;">
                 <th style="padding:14px;border:1px solid #e5e7eb;">Display Size</th>
-                <th style="padding:14px;border:1px solid #e5e7eb;">Recommended Usage</th>
-                <th style="padding:14px;border:1px solid #e5e7eb;">Ideal Capacity</th>
+                <th style="padding:14px;border:1px solid #e5e7eb;">Usage</th>
+                <th style="padding:14px;border:1px solid #e5e7eb;">Capacity</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td style="padding:12px;border:1px solid #e5e7eb;">55 Inch</td>
-                <td style="padding:12px;border:1px solid #e5e7eb;">Home tuitions / Small rooms</td>
-                <td style="padding:12px;border:1px solid #e5e7eb;">10–15 students</td>
-              </tr>
-              <tr style="background:#f9fafb;">
-                <td style="padding:12px;border:1px solid #e5e7eb;">65 Inch</td>
-                <td style="padding:12px;border:1px solid #e5e7eb;">Standard classrooms</td>
-                <td style="padding:12px;border:1px solid #e5e7eb;">Up to 20 students</td>
-              </tr>
-              <tr>
-                <td style="padding:12px;border:1px solid #e5e7eb;">75 Inch</td>
-                <td style="padding:12px;border:1px solid #e5e7eb;">Medium classrooms</td>
-                <td style="padding:12px;border:1px solid #e5e7eb;">30–40 students</td>
-              </tr>
-              <tr style="background:#f9fafb;">
-                <td style="padding:12px;border:1px solid #e5e7eb;">86 Inch</td>
-                <td style="padding:12px;border:1px solid #e5e7eb;">Large classrooms / halls</td>
-                <td style="padding:12px;border:1px solid #e5e7eb;">70–80 students</td>
-              </tr>
-              <tr>
-                <td style="padding:12px;border:1px solid #e5e7eb;">98 Inch</td>
-                <td style="padding:12px;border:1px solid #e5e7eb;">Lecture halls</td>
-                <td style="padding:12px;border:1px solid #e5e7eb;">Up to 90 students</td>
-              </tr>
+              <tr><td>55 Inch</td><td>Home tuitions / Small rooms</td><td>10–15 students</td></tr>
+              <tr style="background:#f9fafb;"><td>65 Inch</td><td>Standard classrooms</td><td>Up to 20 students</td></tr>
+              <tr><td>75 Inch</td><td>Medium classrooms</td><td>30–40 students</td></tr>
+              <tr style="background:#f9fafb;"><td>86 Inch</td><td>Large classrooms / halls</td><td>70–80 students</td></tr>
+              <tr><td>98 Inch</td><td>Lecture halls</td><td>Up to 90 students</td></tr>
             </tbody>
           </table>
+
+          <!-- MOBILE CARDS -->
+          <div class="ifpd-spec-cards" style="display:none;gap:14px;margin-top:10px;">
+            <div class="spec-card">📺 <strong>55"</strong><br>Home tuitions<br>10–15 students</div>
+            <div class="spec-card">📺 <strong>65"</strong><br>Standard classrooms<br>Up to 20</div>
+            <div class="spec-card">📺 <strong>75"</strong><br>Medium classrooms<br>30–40</div>
+            <div class="spec-card">📺 <strong>86"</strong><br>Large classrooms<br>70–80</div>
+            <div class="spec-card">📺 <strong>98"</strong><br>Lecture halls<br>Up to 90</div>
+          </div>
         </div>
 
-        <div style="max-width:1000px;margin:0 auto;">
+        <style>
+          @media(max-width:720px){
+            .ifpd-spec-table{display:none;}
+            .ifpd-spec-cards{
+              display:grid;
+              grid-template-columns:1fr 1fr;
+            }
+            @media(max-width:440px){
+              .ifpd-spec-cards{grid-template-columns:1fr;}
+            }
+            .spec-card{
+              background:#fff;
+              border:1px solid #e5e7eb;
+              border-radius:12px;
+              padding:14px;
+              font-size:15px;
+              line-height:1.45;
+              box-shadow:0 4px 14px rgba(0,0,0,.08);
+            }
+          }
+        </style>
+
+        <div style="max-width:1000px;margin:0 auto 36px;">
           <h4>Key Technical Highlights</h4>
-          <ul style="line-height:1.9;">
-            <li><strong>Processor:</strong> Octa-core processor</li>
-            <li><strong>Memory & Storage:</strong> 8 GB RAM / 128 GB internal</li>
-            <li><strong>Operating System:</strong> Android 13+</li>
-            <li><strong>Touch Technology:</strong> High-precision multi-touch</li>
+          <ul style="line-height:1.8;font-size:16px;">
+            <li><strong>Processor:</strong> Octa-core</li>
+            <li><strong>Memory & Storage:</strong> 8GB RAM / 128GB internal</li>
+            <li><strong>OS:</strong> Android 13+</li>
+            <li><strong>Touch:</strong> High precision multi-touch</li>
             <li><strong>OPS Slot:</strong> Windows OPS support</li>
-            <li><strong>Mounting:</strong> Wall mount or trolley stand</li>
-            <li><strong>Educational Content:</strong> Add-on interactive teaching software</li>
+            <li><strong>Mounting:</strong> Wall / Trolley</li>
+            <li><strong>Content:</strong> Educational add-on software</li>
           </ul>
         </div>
 
-        <div style="text-align:center;margin-top:40px;">
-          <a href="#contact"
+        <div style="text-align:center;margin-top:28px;">
+          <a href="https://wa.me/919326520874"
              style="display:inline-block;background:#2563eb;color:#ffffff;
-                    padding:14px 34px;border-radius:30px;
-                    font-weight:600;text-decoration:none;">
-            Request Demo / Price Quote
+                    padding:12px 28px;border-radius:30px;font-weight:600;
+                    text-decoration:none;">
+            Request Demo / Quote
           </a>
         </div>
-
       </div>
     </details>
 
@@ -356,444 +300,397 @@
     <details open>
       <summary>Lecture Recording Cameras</summary>
 
-      <p class="lead" style="max-width:850px;margin-bottom:30px;">
-        AI-powered lecture recording cameras designed for classrooms, lecture halls, and hybrid learning.
-        Capture, stream and record automatically in professional video quality.
-      </p>
+      <div class="product-block" style="
+          background:#ffffff;border-radius:20px;
+          padding:40px 28px;box-shadow:0 18px 40px rgba(0,0,0,0.08);
+          margin-top:18px;
+      ">
+        <p style="text-align:center;max-width:850px;margin:0 auto 28px;">
+          AI-powered auto-tracking lecture capture cameras designed for classrooms,
+          training centers, auditoriums & hybrid learning.
+        </p>
 
-      <div style="background:#ffffff;border-radius:20px;padding:50px 40px;
-                  box-shadow:0 18px 40px rgba(0,0,0,0.08);margin-top:20px;">
-
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-                    gap:30px;margin-bottom:50px;align-items:center;">
+        <!-- DESKTOP GRID -->
+        <div class="lecture-img-grid" style="
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+            gap:24px;margin-bottom:36px;
+        ">
           <img src="images/products/lecture-camera-ptz.jpg"
-               alt="PTZ Lecture Recording Camera"
-               loading="lazy"
                style="border-radius:14px;box-shadow:0 10px 25px rgba(0,0,0,.12);">
 
         </div>
 
-        <div style="max-width:1000px;margin:0 auto 40px;">
-          <h4>Ideal Use Cases</h4>
-          <ul style="line-height:1.9;">
-            <li>Smart Classrooms & Digital Learning</li>
-            <li>Lecture Halls & Auditoriums</li>
-            <li>Hybrid & Distance Learning</li>
-            <li>Teacher Training & Faculty Development</li>
-            <li>Corporate Training & Boardrooms</li>
+        <!-- MOBILE SWIPE -->
+        <div class="lecture-mobile-swipe" style="
+            display:none;overflow-x:auto;white-space:nowrap;
+            margin-bottom:30px;padding-bottom:10px;
+        ">
+          <img src="images/products/lecture-camera-ptz.jpg"
+               style="height:180px;border-radius:12px;margin-right:14px;display:inline-block;">
+
+        </div>
+
+        <style>
+          @media(max-width:760px){
+            .lecture-img-grid{display:none;}
+            .lecture-mobile-swipe{display:block;}
+          }
+        </style>
+
+        <details open style="margin-bottom:20px;">
+          <summary style="font-size:1.1rem;font-weight:600;color:#0a2540;">
+            Ideal Use Cases
+          </summary>
+          <ul style="line-height:1.75;font-size:16px;margin-top:12px;">
+            <li>Smart classrooms & digital learning</li>
+            <li>Lecture halls & auditoriums</li>
+            <li>Hybrid & distance learning</li>
+            <li>Corporate training & boardrooms</li>
+            <li>Teacher training centers</li>
           </ul>
-        </div>
+        </details>
 
-        <div style="max-width:1000px;margin:0 auto 40px;">
-          <h4>Key Features</h4>
-          <ul style="line-height:1.9;">
-            <li><strong>Auto Speaker Tracking:</strong> AI instructor tracking</li>
-            <li><strong>PTZ Control:</strong> Smooth pan-tilt-zoom</li>
-            <li><strong>Full HD / 4K Output:</strong> Crystal-clear video</li>
-            <li><strong>Outputs:</strong> HDMI / USB / IP Streaming</li>
-            <li><strong>Recording:</strong> One-touch start/stop</li>
-            <li><strong>Live Streaming:</strong> YouTube, LMS, Zoom, Teams</li>
-            <li><strong>Installation:</strong> Ceiling / Wall mount options</li>
+        <details open style="margin-bottom:20px;">
+          <summary style="font-size:1.1rem;font-weight:600;color:#0a2540;">
+            Key Features
+          </summary>
+          <ul style="line-height:1.75;font-size:16px;margin-top:12px;">
+            <li><strong>Auto Tracking:</strong> AI instructor tracking</li>
+            <li><strong>PTZ:</strong> Smooth pan-tilt-zoom</li>
+            <li><strong>Video:</strong> Full HD / 4K</li>
+            <li><strong>Streaming:</strong> RTMP / YouTube / LMS</li>
+            <li><strong>Recording:</strong> Local/remote one-touch</li>
+            <li><strong>Outputs:</strong> HDMI / USB / IP</li>
+            <li><strong>Mounting:</strong> Ceiling / Wall / Tripod</li>
           </ul>
-        </div>
+        </details>
 
-        <div style="max-width:1000px;margin:0 auto 40px;">
-          <h4>Integrated Smart Classroom Solution</h4>
-          <p>
-            Cameras integrate with Interactive Flat Panels, wireless microphones, audio systems,
-            and Learning Management Systems (LMS) to enable automatic content generation.
-          </p>
-        </div>
+        <details open style="margin-bottom:20px;">
+          <summary style="font-size:1.1rem;font-weight:600;color:#0a2540;">
+            Smart Classroom Integration
+          </summary>
+          <ul style="line-height:1.75;font-size:16px;margin-top:12px;">
+            <li>Works with interactive flat panels</li>
+            <li>Supports wireless microphones</li>
+            <li>Compatible with LMS platforms</li>
+            <li>Zoom / Teams / Meet support</li>
+            <li>Upload lecture content to LMS</li>
+          </ul>
+        </details>
 
-        <div style="text-align:center;margin-top:40px;">
-          <a href="#contact"
+        <!-- CTA -->
+        <div style="text-align:center;margin-top:28px;">
+          <a href="https://wa.me/919326520874"
+             class="lecture-cta-btn"
              style="display:inline-block;background:#2563eb;color:#ffffff;
-                    padding:14px 34px;border-radius:30px;
-                    font-weight:600;text-decoration:none;">
-            Request Demo / Solution Consultation
+                    padding:12px 28px;border-radius:30px;font-weight:600;
+                    text-decoration:none;">
+             Request Demo / Consultation
           </a>
         </div>
 
+        <!-- MOBILE STICKY CTA -->
+        <div class="sticky-cta-mobile" data-section="lecture" style="display:none;">
+          <a href="https://wa.me/919326520874"
+             style="display:block;background:#25D366;color:#fff;
+                    padding:14px;text-align:center;font-size:17px;
+                    font-weight:600;text-decoration:none;">
+            💬 WhatsApp Consultation
+          </a>
+        </div>
       </div>
     </details>
-<!-- SOUND SYSTEMS -->
-<details open>
-  <summary>Professional Sound Systems</summary>
 
-  <p class="lead" style="max-width:850px;margin-bottom:30px;">
-    Commercial-grade sound reinforcement and audio distribution systems for classrooms, halls,
-    conference rooms, and training environments. Designed for clarity, speech intelligibility,
-    and seamless integration with modern AV setups.
-  </p>
-
-  <div style="background:#ffffff;border-radius:20px;padding:50px 40px;
-              box-shadow:0 18px 40px rgba(0,0,0,0.08);margin-top:20px;">
-
-    <div class="tilt-grid">
-      <div class="tilt-card">
-        <img src="images/products/sound-speakers.jpg" alt="Commercial Speakers" loading="lazy">
+    <!-- SOUND -->
+    <details open>
+      <summary>Professional Sound Systems</summary>
+      <div class="product-block" style="background:#ffffff;border-radius:20px;padding:40px 28px;
+          box-shadow:0 18px 40px rgba(0,0,0,0.08);margin-top:18px;">
+        <p style="max-width:850px;margin:0 auto 28px;text-align:center;">
+          Amplifiers, speakers, mixers & microphones engineered for clarity.
+        </p>
+        <img src="images/products/sound-system.jpg"
+             style="border-radius:14px;box-shadow:0 10px 45px rgba(0,0,0,.12);
+                    margin:0 auto 28px;max-width:600px;display:block;">
+        <ul style="line-height:1.8;font-size:16px;margin-top:12px;">
+          <li>Digital/Analog mixing</li>
+          <li>Wireless microphones</li>
+          <li>Ceiling & wall speakers</li>
+          <li>Amplifiers & DSP</li>
+          <li>Audio distribution</li>
+        </ul>
+        <div style="text-align:center;margin-top:28px;">
+          <a href="https://wa.me/919326520874"
+             style="display:inline-block;background:#2563eb;color:#ffffff;
+                    padding:12px 28px;border-radius:30px;font-weight:600;
+                    text-decoration:none;">
+            Request Demo / Consultation
+          </a>
+        </div>
       </div>
-     </div>
+    </details>
 
-    <div style="max-width:1000px;margin:0 auto 40px;">
-      <h4>Ideal Use Cases</h4>
-      <ul style="line-height:1.9;">
-        <li>Smart Classrooms & Lecture Halls</li>
-        <li>Auditoriums & Multipurpose Halls</li>
-        <li>Corporate Training & Boardrooms</li>
-        <li>Worship Venues & Cultural Spaces</li>
-        <li>Background Music & Paging Systems</li>
-      </ul>
-    </div>
-
-    <div style="max-width:1000px;margin:0 auto 40px;">
-      <h4>Key Features</h4>
-      <ul style="line-height:1.9;">
-        <li><strong>Wide Speaker Range:</strong> Ceiling, column, line array & wall speakers</li>
-        <li><strong>Amplification:</strong> Class-D high efficiency amplifiers</li>
-        <li><strong>Mixing & DSP:</strong> Built-in EQ, compression & routing</li>
-        <li><strong>Microphone Support:</strong> Wired, wireless & gooseneck mics</li>
-        <li><strong>Audio Sources:</strong> AUX, USB, Bluetooth & Network audio</li>
-        <li><strong>Speech Intelligibility:</strong> Optimized for voice reinforcement</li>
-        <li><strong>Scalable:</strong> Small classrooms to 500+ seat halls</li>
-      </ul>
-    </div>
-
-    <div style="max-width:1000px;margin:0 auto 40px;">
-      <h4>Integrated Audio-Visual Solution</h4>
-      <p>
-        Sound systems integrate seamlessly with Interactive Flat Panels,
-        wireless microphones, projectors, lecture recording equipment,
-        and conferencing platforms, delivering complete smart classroom
-        and presentation environments.
-      </p>
-    </div>
-
-    <div style="text-align:center;margin-top:40px;">
-      <a href="#contact"
-         style="display:inline-block;background:#2563eb;color:#ffffff;
-                padding:14px 34px;border-radius:30px;
-                font-weight:600;text-decoration:none;">
-        Request Demo / Solution Consultation
-      </a>
-    </div>
-
-  </div>
-</details>
-
-<!-- CINEMA THEATRE AT HOME -->
-<details open>
-  <summary>Cinema Theatre at Home</summary>
-
-  <p class="lead" style="max-width:850px;margin-bottom:30px;">
-    Turn your living room into a premium cinematic experience with immersive visuals,
-    surround sound, and intelligent AV integration. Designed for movie enthusiasts,
-    home entertainment and premium residential spaces.
-  </p>
-
-  <div style="background:#ffffff;border-radius:20px;padding:50px 40px;
-              box-shadow:0 18px 40px rgba(0,0,0,0.08);margin-top:20px;">
-
-    <div class="tilt-grid">
-      <div class="tilt-card">
-        <img src="images/products/home-theatre.jpg"
-             alt="Home Cinema Setup"
-             loading="lazy">
+    <!-- CINEMA -->
+    <details open>
+      <summary>Cinema @ Home</summary>
+      <div class="product-block" style="background:#ffffff;border-radius:20px;padding:40px 28px;
+          box-shadow:0 18px 40px rgba(0,0,0,0.08);margin-top:18px;">
+        <p style="max-width:850px;margin:0 auto 28px;text-align:center;">
+          Projection, Dolby audio, acoustic treatment & automation for premium home cinema.
+        </p>
+        <img src="images/products/home-cinema.jpg"
+             style="border-radius:14px;box-shadow:0 10px 25px rgba(0,0,0,.12);
+                    margin:0 auto 28px;max-width:800px;display:block;">
+        <ul style="line-height:1.8;font-size:16px;margin-top:12px;">
+          <li>Projectors & screens</li>
+          <li>Dolby Atmos sound</li>
+          <li>Acoustic calibration</li>
+          <li>Automation & lighting</li>
+          <li>Custom cinema design</li>
+        </ul>
+        <div style="text-align:center;margin-top:28px;">
+          <a href="https://wa.me/919326520874"
+             style="display:inline-block;background:#2563eb;color:#ffffff;
+                    padding:12px 28px;border-radius:30px;font-weight:600;
+                    text-decoration:none;">
+            Request Consultation
+          </a>
+        </div>
       </div>
-    </div>
+    </details>
 
-    <div style="max-width:1000px;margin:0 auto 40px;">
-      <h4>Ideal Applications</h4>
-      <ul style="line-height:1.9;">
-        <li>Premium Living Rooms</li>
-        <li>Dedicated Home Theatre Rooms</li>
-        <li>Luxury Apartments & Villas</li>
-        <li>Media Rooms & Gaming Rooms</li>
-        <li>Family Entertainment Spaces</li>
-      </ul>
-    </div>
-
-    <div style="max-width:1000px;margin:0 auto 40px;">
-      <h4>Key Components</h4>
-      <ul style="line-height:1.9;">
-        <li><strong>Display Options:</strong> Projectors, 4K Panels & Ultra Short Throw</li>
-        <li><strong>Audio Systems:</strong> Dolby Atmos Surround & Subwoofers</li>
-        <li><strong>Media Sources:</strong> OTT, Blu-ray, Streaming & Gaming Consoles</li>
-        <li><strong>Control & Automation:</strong> Lighting, Curtains & AV Control</li>
-        <li><strong>Room Acoustic Treatment:</strong> Panels, Diffusers & Soundproofing</li>
-      </ul>
-    </div>
-
-    <div style="max-width:1000px;margin:0 auto 40px;">
-      <h4>Integrated Entertainment Experience</h4>
-      <p>
-        Our cinema-at-home systems combine rich visuals, precision audio, and smart control
-        to deliver a true theatre-like experience inside your residence — without compromise.
-      </p>
-    </div>
-
-    <div style="text-align:center;margin-top:40px;">
-      <a href="#contact"
-         style="display:inline-block;background:#2563eb;color:#ffffff;
-                padding:14px 34px;border-radius:30px;
-                font-weight:600;text-decoration:none;">
-        Request Demo / Solution Consultation
-      </a>
-    </div>
-
-  </div>
-</details>
-
-
-<!-- ACTIVE LED SIGNAGE -->
-<details open>
-  <summary>Active LED Signage</summary>
-
-  <p class="lead" style="max-width:850px;margin-bottom:30px;">
-    High-brightness, bezel-free LED displays designed for impactful visual communication,
-    advertising and information display in both indoor and outdoor environments.
-    Ideal for premium branding and digital signage applications.
-  </p>
-
-  <div style="background:#ffffff;border-radius:20px;padding:50px 40px;
-              box-shadow:0 18px 40px rgba(0,0,0,0.08);margin-top:20px;">
-
-    <div class="tilt-grid">
-      <div class="tilt-card">
+    <!-- LED -->
+    <details open>
+      <summary>Active LED Signage</summary>
+      <div class="product-block" style="background:#ffffff;border-radius:20px;padding:40px 28px;
+          box-shadow:0 18px 40px rgba(0,0,0,0.08);margin-top:18px;">
+        <p style="max-width:850px;margin:0 auto 28px;text-align:center;">
+          Indoor & outdoor active LED solutions for retail, halls, corporate & events.
+        </p>
         <img src="images/products/active-led.jpg"
-             alt="Active LED Digital Signage"
-             loading="lazy">
+             style="border-radius:14px;box-shadow:0 10px 25px rgba(0,0,0,.12);
+                    margin:0 auto 28px;max-width:850px;display:block;">
+        <ul style="line-height:1.8;font-size:16px;margin-top:12px;">
+          <li>Fine pixel pitch</li>
+          <li>Indoor & outdoor</li>
+          <li>Custom sizing</li>
+          <li>Signage & video walls</li>
+          <li>Retail & events</li>
+        </ul>
+        <div style="text-align:center;margin-top:28px;">
+          <a href="https://wa.me/919326520874"
+             style="display:inline-block;background:#2563eb;color:#ffffff;
+                    padding:12px 28px;border-radius:30px;font-weight:600;
+                    text-decoration:none;">
+            Request Pricing / Specs
+          </a>
+        </div>
       </div>
-    </div>
+    </details>
 
-    <div style="max-width:1000px;margin:0 auto 40px;">
-      <h4>Ideal Applications</h4>
-      <ul style="line-height:1.9;">
-        <li>Retail Stores & Showrooms</li>
-        <li>Malls & Commercial Spaces</li>
-        <li>Hotel Lobbies & Reception Areas</li>
-        <li>Corporate Branding & Visitor Areas</li>
-        <li>Airports, Metro & Public Venues</li>
-        <li>Outdoor Hoardings & Advertising</li>
-      </ul>
-    </div>
-
-    <div style="max-width:1000px;margin:0 auto 40px;">
-      <h4>Key Features</h4>
-      <ul style="line-height:1.9;">
-        <li><strong>Bezel-Free Display:</strong> Seamless video wall experience</li>
-        <li><strong>High Brightness:</strong> Visible in well-lit & outdoor environments</li>
-        <li><strong>Pixel Pitch Options:</strong> P1.2 to P6 for distance-based viewing</li>
-        <li><strong>Modular Panels:</strong> Flexible sizing & aspect ratios</li>
-        <li><strong>Remote Content Control:</strong> Media players & scheduling</li>
-        <li><strong>Energy Efficient:</strong> Optimized LED power consumption</li>
-        <li><strong>Durability:</strong> Long-life LEDs with low maintenance</li>
-      </ul>
-    </div>
-
-    <div style="max-width:1000px;margin:0 auto 40px;">
-      <h4>Integrated Digital Signage Solution</h4>
-      <p>
-        Active LED signage integrates with media players, CMS platforms,
-        conferencing systems and automation, allowing brands to deliver dynamic content,
-        real-time information and premium digital advertising experiences.
-      </p>
-    </div>
-
-    <div style="text-align:center;margin-top:40px;">
-      <a href="#contact"
-         style="display:inline-block;background:#2563eb;color:#ffffff;
-                padding:14px 34px;border-radius:30px;
-                font-weight:600;text-decoration:none;">
-        Request Demo / Solution Consultation
-      </a>
-    </div>
-
-  </div>
-</details>
-
-<!-- SOLAR SYSTEM -->
-<details>
-  <summary>Solar Energy</summary>
-
-  <p class="lead" style="max-width:850px;margin-bottom:30px;">
-    Reliable and efficient solar power solutions for residential, commercial and institutional
-    environments. Designed for long-term energy savings, sustainability and grid independence.
-  </p>
-
-  <div style="background:#ffffff;border-radius:20px;padding:50px 40px;
-              box-shadow:0 18px 40px rgba(0,0,0,0.08);margin-top:20px;">
-
-    <div class="tilt-grid">
-      <div class="tilt-card">
-        <img src="images/products/solar-system.jpg"
-             alt="Solar System Setup"
-             loading="lazy">
+    <!-- SOLAR -->
+    <details open>
+      <summary>Solar Energy Solutions</summary>
+      <div class="product-block" style="background:#ffffff;border-radius:20px;padding:40px 28px;
+          box-shadow:0 18px 40px rgba(0,0,0,0.08);margin-top:18px;">
+        <p style="max-width:850px;margin:0 auto 28px;text-align:center;">
+          Solar power solutions for homes, institutions & commercial buildings.
+        </p>
+        <img src="images/products/solar.jpg"
+             style="border-radius:14px;box-shadow:0 10px 25px rgba(0,0,0,.12);
+                    margin:0 auto 28px;max-width:850px;display:block;">
+        <ul style="line-height:1.8;font-size:16px;margin-top:12px;">
+          <li>On-grid & off-grid</li>
+          <li>Rooftop solar</li>
+          <li>Inverters & batteries</li>
+          <li>Commercial & residential</li>
+          <li>Energy consultation</li>
+        </ul>
+        <div style="text-align:center;margin-top:28px;">
+          <a href="https://wa.me/919326520874"
+             style="display:inline-block;background:#2563eb;color:#ffffff;
+                    padding:12px 28px;border-radius:30px;font-weight:600;
+                    text-decoration:none;">
+            Request Site Visit / Quote
+          </a>
+        </div>
       </div>
-    </div>
-
-    <div style="max-width:1000px;margin:0 auto 40px;">
-      <h4>Ideal Applications</h4>
-      <ul style="line-height:1.9;">
-        <li>Homes & Residential Buildings</li>
-        <li>Commercial Offices & Warehouses</li>
-        <li>Schools & Educational Campuses</li>
-        <li>Industrial Units & Factories</li>
-        <li>Hybrid & Off-Grid Installations</li>
-        <li>Institutional & Government Buildings</li>
-      </ul>
-    </div>
-
-    <div style="max-width:1000px;margin:0 auto 40px;">
-      <h4>Key Features</h4>
-      <ul style="line-height:1.9;">
-        <li><strong>Solar Panels:</strong> Mono/Poly crystalline modules</li>
-        <li><strong>Inverters:</strong> On-Grid, Off-Grid & Hybrid inverter options</li>
-        <li><strong>Battery Backup:</strong> Lithium & Tubular battery solutions</li>
-        <li><strong>Energy Monitoring:</strong> Real-time solar analytics & tracking</li>
-        <li><strong>Net Metering:</strong> Export surplus energy to the grid</li>
-        <li><strong>Sustainable ROI:</strong> Reduce electricity bills & carbon footprint</li>
-        <li><strong>Durability:</strong> Weather-resistant and long service life</li>
-      </ul>
-    </div>
-
-    <div style="max-width:1000px;margin:0 auto 40px;">
-      <h4>Integrated Solar Energy Solution</h4>
-      <p>
-        Our solar systems seamlessly integrate with power distribution,
-        battery storage and energy management platforms, ensuring reliable performance
-        and maximum energy efficiency for long-term use.
-      </p>
-    </div>
-
-    <div style="text-align:center;margin-top:40px;">
-      <a href="#contact"
-         style="display:inline-block;background:#2563eb;color:#ffffff;
-                padding:14px 34px;border-radius:30px;
-                font-weight:600;text-decoration:none;">
-        Request Demo / Solution Consultation
-      </a>
-    </div>
-
-  </div>
-</details>
-
-
+    </details>
   </div>
 </section>
 
-<!-- PARTNERS -->
-<section id="partners">
-  <div class="container">
-    <h2>Trusted Technology Partners</h2>
-    <p class="lead">We collaborate with leading global, education and AI brands to deliver reliable and future-ready solutions.</p>
+<section id="partners" class="alt" style="background:var(--bg);padding-bottom:50px;">
+  <div class="container" style="text-align:center;">
+    <h2>Technology Partners</h2>
+    <p class="lead">We collaborate with leading global brands.</p>
 
-    <div class="partners-wrapper">
-      <div class="partner-strip">
-        <img src="images/partners/bosch.png" alt="Bosch" />
-        <img src="images/partners/jbl.png" alt="JBL" />
-        <img src="images/partners/optoma.png" alt="Optoma" />
-        <img src="images/partners/acer.png" alt="Acer" />
-        <img src="images/partners/a-and-t.png" alt="A&T" />
-        <img src="images/partners/newline.png" alt="Newline" />
-        <img src="images/partners/aver.png" alt="Aver" />
-        <img src="images/partners/dahua.png" alt="Dahua" />
-        <img src="images/partners/hikvision.png" alt="Hikvision" />
-        <img src="images/partners/viewsonic.png" alt="ViewSonic" />
-        <img src="images/partners/study-n-learn.png" alt="Study N Learn" />
-        <img src="images/partners/prizor.png" alt="Prizor" />
-        <img src="images/partners/iris-ai.png" alt="Iris AI" />
-
-        <!-- Duplicate for seamless loop -->
-        <img src="images/partners/bosch.png" alt="Bosch" />
-        <img src="images/partners/jbl.png" alt="JBL" />
-        <img src="images/partners/optoma.png" alt="Optoma" />
-        <img src="images/partners/acer.png" alt="Acer" />
-        <img src="images/partners/a-and-t.png" alt="A&T" />
-        <img src="images/partners/newline.png" alt="Newline" />
-        <img src="images/partners/aver.png" alt="Aver" />
-        <img src="images/partners/dahua.png" alt="Dahua" />
-        <img src="images/partners/hikvision.png" alt="Hikvision" />
-        <img src="images/partners/viewsonic.png" alt="ViewSonic" />
-        <img src="images/partners/study-n-learn.png" alt="Study N Learn" />
-        <img src="images/partners/prizor.png" alt="Prizor" />
-        <img src="images/partners/iris-ai.png" alt="Iris AI" />
-      </div>
+    <div class="partners-grid" style="
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+        gap:24px;align-items:center;justify-items:center;margin-top:18px;">
+        <img src="images/partners/bosch.png" style="height:42px;">
+        <img src="images/partners/jbl.png" style="height:42px;">
+        <img src="images/partners/optoma.png" style="height:42px;">
+        <img src="images/partners/acer.png" style="height:42px;">
+        <img src="images/partners/a-and-t.png" style="height:42px;">
+        <img src="images/partners/newline.png" style="height:42px;">
+        <img src="images/partners/aver.png" style="height:42px;">
+        <img src="images/partners/dahua.png" style="height:42px;">
+        <img src="images/partners/hikvision.png" style="height:42px;">
+        <img src="images/partners/viewsonic.png" style="height:42px;">
+        <img src="images/partners/study-n-learn.png" style="height:42px;">
+        <img src="images/partners/prizor.png" style="height:42px;">
+        <img src="images/partners/iris-ai.png" style="height:42px;">
+        <img src="images/partners/index.png" style="height:42px;">
     </div>
+
+    <div class="partners-swipe" style="
+        display:none;overflow-x:auto;white-space:nowrap;margin-top:20px;padding-bottom:10px;">
+        <img src="images/partners/bosch.png" style="height:38px;margin-right:20px;">
+        <img src="images/partners/jbl.png" style="height:38px;margin-right:20px;">
+        <img src="images/partners/optoma.png" style="height:38px;margin-right:20px;">
+        <img src="images/partners/acer.png" style="height:38px;margin-right:20px;">
+        <img src="images/partners/a-and-t.png" style="height:38px;margin-right:20px;">
+        <img src="images/partners/newline.png" style="height:38px;margin-right:20px;">
+        <img src="images/partners/aver.png" style="height:38px;margin-right:20px;">
+        <img src="images/partners/dahua.png" style="height:38px;margin-right:20px;">
+        <img src="images/partners/hikvision.png" style="height:38px;margin-right:20px;">
+        <img src="images/partners/viewsonic.png" style="height:38px;margin-right:20px;">
+        <img src="images/partners/study-n-learn.png" style="height:38px;margin-right:20px;">
+        <img src="images/partners/prizor.png" style="height:38px;margin-right:20px;">
+        <img src="images/partners/iris-ai.png" style="height:38px;margin-right:20px;">
+        <img src="images/partners/index.png" style="height:38px;margin-right:20px;">
+      <img src="images/partners/zoom.png" style="height:38px;">
+    </div>
+
+    <style>
+    @media(max-width:760px){
+      .partners-grid{display:none;}
+      .partners-swipe{display:block;}
+    }
+    </style>
+  </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="alt">
+<section id="contact" style="padding-bottom:90px;">
   <div class="container">
-    <h2 style="text-align:center;">Contact Us</h2>
-    <p class="lead" style="text-align:center;margin-left:auto;margin-right:auto;">
-      Have a question or planning a project? Get in touch with us and our team will respond promptly.
-    </p>
+    <h2>Contact Us</h2>
+    <p class="lead">Reach us for demos, pricing & solution consultation.</p>
 
-    <div class="contact-grid" style="margin-top:50px;">
-      <div>
-	<br>
-	<br>
-        <h3>AIT Enterprises</h3>
-	<br>
-        <p>
-          <strong>MUMBAI</strong><br>
-          202, Shubham Palace, Sector 15, Koparkhairne<br>
-          Navi Mumbai – 400709
-        </p>
-	</br>        
-	<p>
-          <strong>COIMBATORE</strong><br>
-          Udayampalayam Road<br>
-          Coimbatore, Tamil Nadu – 641028
-        </p>
-	<br>
-	<p><strong>Email:</strong><br>enquiry@aitpro.online</p>
-	<br>        
-	<p><strong>Phone:</strong><br>+91 9326520874</p>
-      </div>
-
-      <form action="https://formspree.io/f/mnqekqrd" method="POST" style="background:#ffffff;color:#111827;padding:30px;border-radius:16px;box-shadow:0 15px 35px rgba(0,0,0,.15);">
-        <label>Name</label><br>
-        <input type="text" name="name" required style="width:100%;padding:12px;margin:8px 0 18px;border-radius:8px;border:1px solid #d1d5db;" />
-
-        <label>Email</label><br>
-        <input type="email" name="email" required style="width:100%;padding:12px;margin:8px 0 18px;border-radius:8px;border:1px solid #d1d5db;" />
-
-        <label>Phone</label><br>
-        <input type="tel" name="phone" style="width:100%;padding:12px;margin:8px 0 18px;border-radius:8px;border:1px solid #d1d5db;" />
-
-        <label>Message</label><br>
-        <textarea name="message" rows="4" required style="width:100%;padding:12px;margin:8px 0 20px;border-radius:8px;border:1px solid #d1d5db;"></textarea>
-
-        <button type="submit" style="background:#2563eb;color:#fff;border:none;padding:14px 26px;border-radius:30px;font-weight:600;cursor:pointer;">Send Message</button>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:30px;">
+      <form action="https://formspree.io/f/xoqzvgjy" method="POST"
+            style="display:flex;flex-direction:column;gap:14px;">
+        <input type="text" name="name" placeholder="Name" required
+               style="padding:12px;font-size:16px;border:1px solid #d1d5db;border-radius:8px;">
+        <input type="email" name="email" placeholder="Email" required
+               style="padding:12px;font-size:16px;border:1px solid #d1d5db;border-radius:8px;">
+        <input type="text" name="phone" placeholder="Phone"
+               style="padding:12px;font-size:16px;border:1px solid #d1d5db;border-radius:8px;">
+        <textarea name="message" placeholder="Message" rows="4"
+                  style="padding:12px;font-size:16px;border:1px solid #d1d5db;border-radius:8px;"></textarea>
+        <button type="submit"
+                style="padding:12px;background:var(--accent);color:#fff;border:none;
+                       border-radius:8px;font-size:16px;font-weight:600;cursor:pointer;">
+          Send
+        </button>
       </form>
+
+      <div style="line-height:1.8;font-size:16px;">
+        <strong>AIT Enterprises</strong><br><br>
+        📍 Mumbai, Maharashtra | Coimbatore, Tamil Nadu<br>
+        📧 info@aitpro.online<br>
+        📞 +91 93265 20874<br><br>
+        Business Hours:<br>
+        Mon – Sat | 10:00 AM – 7:00 PM
+      </div>
     </div>
+
+    <style>
+      @media(max-width:760px){
+        #contact .container > div{grid-template-columns:1fr;}
+      }
+    </style>
   </div>
 </section>
 
-<footer>
-  <p>© 2025 AIT Enterprises. All rights reserved.</p>
+<footer style="background:#0a2540;color:#ffffff;padding:26px;text-align:center;">
+  &copy; 2025 AIT Enterprises — All Rights Reserved.
 </footer>
 
-<a href="tel:9326520874" class="float-btn call" aria-label="Call AIT Enterprises">📞 Call</a>
-<a href="https://wa.me/919326520874" class="float-btn whatsapp" aria-label="WhatsApp AIT Enterprises">💬 WhatsApp</a>
+<!-- MOBILE BOTTOM NAV -->
+<nav id="mobile-bottom-nav" style="
+  position:fixed;bottom:0;left:0;width:100%;
+  background:#ffffff;border-top:1px solid #e5e7eb;
+  display:flex;justify-content:space-around;align-items:center;
+  padding:6px 0;font-size:13px;z-index:999;
+  transform:translateY(0);transition:transform .25s ease-out;">
+  <a href="#top" style="text-decoration:none;color:#111;text-align:center;">
+    🏠<br><span>Home</span>
+  </a>
+  <a href="#products" style="text-decoration:none;color:#111;text-align:center;">
+    📦<br><span>Products</span>
+  </a>
+  <a href="#contact" style="text-decoration:none;color:#111;text-align:center;">
+    📩<br><span>Contact</span>
+  </a>
+  <a href="https://wa.me/919326520874" style="text-decoration:none;color:#111;text-align:center;">
+    💬<br><span>WhatsApp</span>
+  </a>
+  <a href="tel:+919326520874" style="text-decoration:none;color:#111;text-align:center;">
+    📞<br><span>Call</span>
+  </a>
+</nav>
+
+<style>
+@media(min-width:768px){
+  #mobile-bottom-nav{display:none;}
+  .sticky-cta-mobile{display:none!important;}
+}
+
+@supports(padding:env(safe-area-inset-bottom)){
+  #mobile-bottom-nav{padding-bottom:env(safe-area-inset-bottom);}
+  .sticky-cta-mobile a{padding-bottom:calc(14px + env(safe-area-inset-bottom));}
+}
+
+.sticky-cta-mobile{
+  position:fixed;left:0;bottom:0;width:100%;z-index:998;
+}
+</style>
 
 <script>
-  const sections = document.querySelectorAll("section");
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add("in-view");
-        obs.unobserve(entry.target);
-      }
-    });
-  },{threshold:0.15});
-  sections.forEach(sec => observer.observe(sec));
+/* SECTION REVEAL */
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting) e.target.classList.add('in-view')})
+},{threshold:.15});
+document.querySelectorAll('section').forEach(sec=>observer.observe(sec));
+
+/* BOTTOM NAV HIDE/SHOW */
+let lastScroll=0;
+const bottomNav=document.getElementById('mobile-bottom-nav');
+window.addEventListener('scroll',()=>{
+  const cur=window.scrollY;
+  if(cur>lastScroll && cur>100){
+    bottomNav.style.transform='translateY(100%)';
+  } else {
+    bottomNav.style.transform='translateY(0)';
+  }
+  lastScroll=cur;
+});
+
+/* STICKY CTA */
+const stickyCTA=document.querySelector('.sticky-cta-mobile[data-section="lecture"]');
+const lectureSection=document.querySelector('#products details:first-of-type');
+
+if(stickyCTA && lectureSection){
+  const ctaObs=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      stickyCTA.style.display=entry.isIntersecting?'block':'none';
+    })
+  },{threshold:.25});
+  ctaObs.observe(lectureSection);
+}
 </script>
 
 </body>
 </html>
-
-
-
