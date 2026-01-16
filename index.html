@@ -403,91 +403,191 @@
     </details>
 
     <!-- SOUND -->
-    <details open>
+     <details open>
       <summary>Professional Sound Systems</summary>
-      <div class="product-block" style="background:#ffffff;border-radius:20px;padding:40px 28px;
-          box-shadow:0 18px 40px rgba(0,0,0,0.08);margin-top:18px;">
-        <p style="max-width:850px;margin:0 auto 28px;text-align:center;">
-          Amplifiers, speakers, mixers & microphones engineered for clarity.
+
+      <div class="product-block" style="
+          background:#ffffff;border-radius:20px;
+          padding:40px 28px;box-shadow:0 18px 40px rgba(0,0,0,0.08);
+          margin-top:18px;
+      ">
+        <p style="text-align:center;max-width:850px;margin:0 auto 28px;">
+              Commercial-grade sound reinforcement and audio distribution systems for classrooms, halls,
+    		conference rooms, and training environments. Designed for clarity, speech intelligibility,
+    		and seamless integration with modern AV setups.
         </p>
-        <img src="images/products/sound-system.jpg"
-             style="border-radius:14px;box-shadow:0 10px 45px rgba(0,0,0,.12);
-                    margin:0 auto 28px;max-width:600px;display:block;">
-        <ul style="line-height:1.8;font-size:16px;margin-top:12px;">
-          <li>Digital/Analog mixing</li>
-          <li>Wireless microphones</li>
-          <li>Ceiling & wall speakers</li>
-          <li>Amplifiers & DSP</li>
-          <li>Audio distribution</li>
-        </ul>
+
+        <!-- DESKTOP GRID -->
+        <div class="sound-img-grid" style="
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+            gap:24px;margin-bottom:36px;
+        ">
+          <img src="images/products/sound-system.jpg"
+               style="border-radius:14px;box-shadow:0 10px 25px rgba(0,0,0,.12);">
+
+        </div>
+
+        <!-- MOBILE SWIPE -->
+        <div class="sound-mobile-swipe" style="
+            display:none;overflow-x:auto;white-space:nowrap;
+            margin-bottom:30px;padding-bottom:10px;
+        ">
+          <img src="images/products/sound-system.jpg"
+               style="height:180px;border-radius:12px;margin-right:14px;display:inline-block;">
+
+        </div>
+
+        <style>
+          @media(max-width:760px){
+            .sound-img-grid{display:none;}
+            .sound-mobile-swipe{display:block;}
+          }
+        </style>
+
+        <details open style="margin-bottom:20px;">
+          <summary style="font-size:1.1rem;font-weight:600;color:#0a2540;">
+            Ideal Use Cases
+          </summary>
+          <ul style="line-height:1.75;font-size:16px;margin-top:12px;">
+            <li>Smart Classrooms & Lecture Halls</li>
+            <li>Auditoriums & Multipurpose Halls</li>
+            <li>Corporate Training & Boardrooms</li>
+            <li>Worship Venues & Cultural Spaces</li>
+            <li>Background Music & Paging Systems</li>
+          </ul>
+        </details>
+
+        <details open style="margin-bottom:20px;">
+          <summary style="font-size:1.1rem;font-weight:600;color:#0a2540;">
+            Key Features
+          </summary>
+          <ul style="line-height:1.75;font-size:16px;margin-top:12px;">
+       		<li><strong>Wide Speaker Range:</strong> Ceiling, column, line array & wall speakers</li>
+        	<li><strong>Amplification:</strong> Class-D high efficiency amplifiers</li>
+        	<li><strong>Mixing & DSP:</strong> Built-in EQ, compression & routing</li>
+        	<li><strong>Microphone Support:</strong> Wired, wireless & gooseneck mics</li>
+        	<li><strong>Audio Sources:</strong> AUX, USB, Bluetooth & Network audio</li>
+        	<li><strong>Speech Intelligibility:</strong> Optimized for voice reinforcement</li>
+        	<li><strong>Scalable:</strong> Small classrooms to 500+ seat halls</li>
+          </ul>
+        </details>
+
+        <!-- CTA -->
         <div style="text-align:center;margin-top:28px;">
           <a href="https://wa.me/919326520874"
+             class="lecture-cta-btn"
              style="display:inline-block;background:#2563eb;color:#ffffff;
                     padding:12px 28px;border-radius:30px;font-weight:600;
                     text-decoration:none;">
-            Request Demo / Consultation
+             Request Demo / Consultation
+          </a>
+        </div>
+
+        <!-- MOBILE STICKY CTA -->
+        <div class="sticky-cta-mobile" data-section="sound" style="display:none;">
+          <a href="https://wa.me/919326520874"
+             style="display:block;background:#25D366;color:#fff;
+                    padding:14px;text-align:center;font-size:17px;
+                    font-weight:600;text-decoration:none;">
+            💬 WhatsApp Consultation
           </a>
         </div>
       </div>
+    </details>   
+
+ <!-- CINEMA THEATRE AT HOME -->
+<details open>
+  <summary>Cinema Theatre at Home</summary>
+
+  <div class="product-block" style="
+      background:#ffffff;border-radius:20px;
+      padding:40px 28px;box-shadow:0 18px 40px rgba(0,0,0,0.08);
+      margin-top:18px;
+  ">
+    <p style="text-align:center;max-width:850px;margin:0 auto 28px;">
+      Turn your living room into a premium cinematic experience with immersive visuals,
+      surround sound, and intelligent AV integration. Designed for movie enthusiasts,
+      home entertainment and premium residential spaces.
+    </p>
+
+    <!-- DESKTOP GRID -->
+    <div class="cinema-img-grid" style="
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+        gap:24px;margin-bottom:36px;
+    ">
+      <img src="images/products/home-cinema.jpg"
+           style="border-radius:14px;box-shadow:0 10px 25px rgba(0,0,0,.12);">
+    </div>
+
+    <!-- MOBILE SWIPE -->
+    <div class="cinema-mobile-swipe" style="
+        display:none;overflow-x:auto;white-space:nowrap;
+        margin-bottom:30px;padding-bottom:10px;
+    ">
+      <img src="images/products/home-cinema.jpg"
+           style="height:180px;border-radius:12px;margin-right:14px;display:inline-block;">
+    </div>
+
+    <style>
+      @media(max-width:760px){
+        .cinema-img-grid{display:none;}
+        .cinema-mobile-swipe{display:block;}
+      }
+    </style>
+
+    <details open style="margin-bottom:20px;">
+      <summary style="font-size:1.1rem;font-weight:600;color:#0a2540;">
+        Ideal Use Cases
+      </summary>
+      <ul style="line-height:1.75;font-size:16px;margin-top:12px;">
+        <li>Premium Living Rooms</li>
+        <li>Dedicated Home Theatre Rooms</li>
+        <li>Luxury Apartments & Villas</li>
+        <li>Media Rooms & Gaming Rooms</li>
+        <li>Family Entertainment Spaces</li>
+      </ul>
     </details>
 
-    <!-- CINEMA -->
-    <details open>
-      <summary>Cinema @ Home</summary>
-      <div class="product-block" style="background:#ffffff;border-radius:20px;padding:40px 28px;
-          box-shadow:0 18px 40px rgba(0,0,0,0.08);margin-top:18px;">
-        <p style="max-width:850px;margin:0 auto 28px;text-align:center;">
-          Projection, Dolby audio, acoustic treatment & automation for premium home cinema.
-        </p>
-        <img src="images/products/home-cinema.jpg"
-             style="border-radius:14px;box-shadow:0 10px 25px rgba(0,0,0,.12);
-                    margin:0 auto 28px;max-width:800px;display:block;">
-        <ul style="line-height:1.8;font-size:16px;margin-top:12px;">
-          <li>Projectors & screens</li>
-          <li>Dolby Atmos sound</li>
-          <li>Acoustic calibration</li>
-          <li>Automation & lighting</li>
-          <li>Custom cinema design</li>
-        </ul>
-        <div style="text-align:center;margin-top:28px;">
-          <a href="https://wa.me/919326520874"
-             style="display:inline-block;background:#2563eb;color:#ffffff;
-                    padding:12px 28px;border-radius:30px;font-weight:600;
-                    text-decoration:none;">
-            Request Consultation
-          </a>
-        </div>
-      </div>
+    <details open style="margin-bottom:20px;">
+      <summary style="font-size:1.1rem;font-weight:600;color:#0a2540;">
+        Key Features
+      </summary>
+      <ul style="line-height:1.75;font-size:16px;margin-top:12px;">
+        <li><strong>Display Options:</strong> Projectors, 4K Panels & Ultra Short Throw</li>
+        <li><strong>Audio Systems:</strong> Dolby Atmos Surround & Subwoofers</li>
+        <li><strong>Media Sources:</strong> OTT, Blu-ray, Streaming & Gaming Consoles</li>
+        <li><strong>Control & Automation:</strong> Lighting, Curtains & AV Control</li>
+        <li><strong>Room Acoustic Treatment:</strong> Panels, Diffusers & Soundproofing</li>
+      </ul>
     </details>
 
-    <!-- LED -->
-    <details open>
-      <summary>Active LED Signage</summary>
-      <div class="product-block" style="background:#ffffff;border-radius:20px;padding:40px 28px;
-          box-shadow:0 18px 40px rgba(0,0,0,0.08);margin-top:18px;">
-        <p style="max-width:850px;margin:0 auto 28px;text-align:center;">
-          Indoor & outdoor active LED solutions for retail, halls, corporate & events.
-        </p>
-        <img src="images/products/active-led.jpg"
-             style="border-radius:14px;box-shadow:0 10px 25px rgba(0,0,0,.12);
-                    margin:0 auto 28px;max-width:850px;display:block;">
-        <ul style="line-height:1.8;font-size:16px;margin-top:12px;">
-          <li>Fine pixel pitch</li>
-          <li>Indoor & outdoor</li>
-          <li>Custom sizing</li>
-          <li>Signage & video walls</li>
-          <li>Retail & events</li>
-        </ul>
-        <div style="text-align:center;margin-top:28px;">
-          <a href="https://wa.me/919326520874"
-             style="display:inline-block;background:#2563eb;color:#ffffff;
-                    padding:12px 28px;border-radius:30px;font-weight:600;
-                    text-decoration:none;">
-            Request Pricing / Specs
-          </a>
-        </div>
-      </div>
-    </details>
+    <div style="text-align:center;margin-top:28px;">
+      <a href="https://wa.me/919326520874"
+         style="display:inline-block;background:#2563eb;color:#ffffff;
+                padding:12px 28px;border-radius:30px;font-weight:600;
+                text-decoration:none;">
+         Request Demo / Consultation
+      </a>
+    </div>
+
+    <!-- MOBILE STICKY CTA -->
+    <div class="sticky-cta-mobile" data-section="cinema" style="display:none;">
+      <a href="https://wa.me/919326520874"
+         style="display:block;background:#25D366;color:#fff;
+                padding:14px;text-align:center;font-size:17px;
+                font-weight:600;text-decoration:none;">
+        💬 WhatsApp Consultation
+      </a>
+    </div>
+  </div>
+</details>
+
+
+
+
+
 
     <!-- SOLAR -->
     <details open>
@@ -519,6 +619,7 @@
     </details>
   </div>
 </section>
+
 
 <section id="partners" class="alt" style="background:var(--bg);padding-bottom:50px;">
   <div class="container" style="text-align:center;">
@@ -659,15 +760,24 @@
 </style>
 
 <script>
-/* SECTION REVEAL */
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting) e.target.classList.add('in-view')})
+/* ===============================
+   SECTION REVEAL ANIMATION
+================================ */
+const sectionObserver = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting) e.target.classList.add('in-view');
+  });
 },{threshold:.15});
-document.querySelectorAll('section').forEach(sec=>observer.observe(sec));
 
-/* BOTTOM NAV HIDE/SHOW */
+document.querySelectorAll('section').forEach(sec=>sectionObserver.observe(sec));
+
+
+/* ===============================
+   MOBILE BOTTOM NAV HIDE/SHOW
+================================ */
 let lastScroll=0;
 const bottomNav=document.getElementById('mobile-bottom-nav');
+
 window.addEventListener('scroll',()=>{
   const cur=window.scrollY;
   if(cur>lastScroll && cur>100){
@@ -678,19 +788,49 @@ window.addEventListener('scroll',()=>{
   lastScroll=cur;
 });
 
-/* STICKY CTA */
-const stickyCTA=document.querySelector('.sticky-cta-mobile[data-section="lecture"]');
-const lectureSection=document.querySelector('#products details:first-of-type');
 
-if(stickyCTA && lectureSection){
-  const ctaObs=new IntersectionObserver(entries=>{
+/* ===============================
+   STICKY CTA FOR ALL PRODUCT SECTIONS
+================================ */
+
+const productDetails = document.querySelectorAll('#products details');
+const stickyCTAs = document.querySelectorAll('.sticky-cta-mobile');
+
+if(productDetails.length && stickyCTAs.length){
+
+  const stickyMap = [...productDetails].map((block,i)=>{
+    const section = block;
+    const key = section.querySelector('summary')?.textContent.toLowerCase() || `p${i}`;
+    const match = [...stickyCTAs].find(cta=>{
+      return cta.dataset.section && key.includes(cta.dataset.section);
+    });
+    return {section,cta:match};
+  });
+
+  let activeCTA=null;
+
+  const productObs = new IntersectionObserver(entries=>{
     entries.forEach(entry=>{
-      stickyCTA.style.display=entry.isIntersecting?'block':'none';
-    })
+      const item = stickyMap.find(m=>m.section===entry.target);
+      if(!item || !item.cta) return;
+
+      if(entry.isIntersecting){
+        if(activeCTA && activeCTA!==item.cta){
+          activeCTA.style.display='none';
+        }
+        item.cta.style.display='block';
+        activeCTA=item.cta;
+      } else {
+        if(activeCTA===item.cta){
+          item.cta.style.display='none';
+          activeCTA=null;
+        }
+      }
+    });
   },{threshold:.25});
-  ctaObs.observe(lectureSection);
+
+  stickyMap.forEach(m=>productObs.observe(m.section));
 }
 </script>
 
-</body>
 </html>
