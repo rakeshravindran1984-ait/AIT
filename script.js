@@ -1,0 +1,1 @@
+const menu=document.querySelector('.menu'),nav=document.querySelector('.nav');menu?.addEventListener('click',()=>{nav.style.display=nav.style.display==='flex'?'none':'flex'});nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{if(innerWidth<=800)nav.style.display='none'}));
